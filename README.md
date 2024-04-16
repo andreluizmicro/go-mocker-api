@@ -1,4 +1,4 @@
-# GO MOCKER API
+# GO Mocker
 
 API desenvolvida em GO Lang que tem por objetivo, facilitar testes para desenvolvedores, QAs e etc. A API é responsável por criar mocks genéricos para testes de APIS, frontends, testes entre outros.
 
