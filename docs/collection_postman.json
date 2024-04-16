@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "3e00d893-8616-4f81-83e5-4b3d653fa0e1",
+		"name": "MOCKER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20947338"
+	},
+	"item": [
+		{
+			"name": "Create Mock",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"andre\",\n    \"email\": \"andreluzimicro@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/mock",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"mock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Mock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/mock",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"mock"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

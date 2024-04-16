@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: MOCKER
+  version: 1.0.0
+servers:
+  - url: http://localhost:9000
+    description: Local
+  - url: http://localhost:9000
+    description: Stage
+  - url: http://localhost:9000
+    description: Production
+paths:
+  /mock:
+    post:
+      tags:
+        - default
+      summary: Create Mock
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: andre
+                email: andreluzimicro@gmail.com
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - default
+      summary: Find Mock
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

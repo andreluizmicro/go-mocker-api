@@ -1,0 +1,19 @@
+{
+    "servers": [
+        {
+            "url": "http://localhost:9000",
+            "description": "Local"
+        },
+        {
+            "url": "http://localhost:9000",
+            "description": "Stage"
+        },
+        {
+            "url": "http://localhost:9000",
+            "description": "Production"
+        }
+    ],
+    "disabledParams": {
+        "includeQuery": true
+    }
+}

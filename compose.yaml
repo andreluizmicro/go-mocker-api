@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  app:
+    container_name: go-mocker-api
+    build:
+      context: ./
+      dockerfile: .setup/build/dev/Dockerfile
+    ports:
+      - "9000:9000"
+    networks:
+      - go-mocker-api
+    volumes:
+      - .:/app
+
+networks:
+  go-mocker-api:
+    driver: bridge
