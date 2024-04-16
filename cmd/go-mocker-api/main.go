@@ -81,10 +81,8 @@ func StartWebServer(port, uri string) {
 	mockService := application.NewMockService(mockRepository)
 	mockHandler := handlers.NewMockHandler(mockService)
 
-	fmt.Println(port)
-
 	mux.HandleFunc("POST /mock", mockHandler.Create)
-	mux.HandleFunc(fmt.Sprintf("GET /%s/{session_id}", uri), mockHandler.Find)
+	mux.HandleFunc(fmt.Sprintf("GET /%s", uri), mockHandler.Find)
 
 	http.ListenAndServe(":"+port, mux)
 }

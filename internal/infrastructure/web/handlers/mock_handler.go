@@ -53,9 +53,7 @@ func (m *MockHandler) Create(w http.ResponseWriter, r *http.Request) {
 }
 
 func (m *MockHandler) Find(w http.ResponseWriter, r *http.Request) {
-	sessionId := r.PathValue("session_id")
-
-	file, err := m.mockService.Find(sessionId)
+	file, err := m.mockService.Find()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

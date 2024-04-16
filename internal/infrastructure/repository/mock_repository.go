@@ -33,8 +33,8 @@ func (r *MockRepository) Create(mock entity.Mock) (*string, error) {
 	return &r.sessionId, nil
 }
 
-func (r *MockRepository) Find(sessionId string) ([]byte, error) {
-	file, err := os.ReadFile(fmt.Sprintf("./tmp/mock/%s/mock.json", sessionId))
+func (r *MockRepository) Find() ([]byte, error) {
+	file, err := os.ReadFile(fmt.Sprintf("./tmp/mock/%s/mock.json", r.sessionId))
 	if err != nil {
 		fmt.Println(err)
 		return nil, errors.ErrMockNotFound

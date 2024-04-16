@@ -24,8 +24,8 @@ func (s *MockService) Create(payload []byte) (*string, error) {
 	return sessiontId, nil
 }
 
-func (s *MockService) Find(sessionId string) ([]byte, error) {
-	data, err := s.mockRepository.Find(sessionId)
+func (s *MockService) Find() ([]byte, error) {
+	data, err := s.mockRepository.Find()
 	if err != nil {
 		return nil, err
 	}
